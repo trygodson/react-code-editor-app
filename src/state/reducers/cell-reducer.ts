@@ -41,7 +41,7 @@ const reducer = produce((state: CellsState = initialState, action: Action) => {
       return state;
     case ActionTypes.DELETE_CELL:
       delete state.data[action.payload];
-      state.order = state.order.filter(id => id != action.payload);
+      state.order = state.order.filter(id => id !== action.payload);
       // return state;
       return state;
     case ActionTypes.INSERT_CELL_AFTER:
